@@ -158,11 +158,16 @@
         background: #050505;
       }
 
-      .socials {
+      #contact ul {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
         font-size: 0.9rem;
+        list-style-type: none;
+      }
+
+      #contact ul li::before {
+        content: "→ ";
       }
 
       footer {
@@ -327,8 +332,7 @@
 
     <section id="contact">
       <h2>Contact</h2>
-
-      <ul class="socials">
+      <ul>
         <li>Mail: <a href="mailto:scigrooves@gmail.com">scigrooves@gmail.com</a></li>
         <li>Bandcamp: <a href="https://sci-grooves.bandcamp.com/" target="_blank" rel="noopener noreferrer">https://sci-grooves.bandcamp.com/</a></li>
         <li>SoundCloud: <a href="https://soundcloud.com/sci-grooves" target="_blank" rel="noopener noreferrer">https://soundcloud.com/sci-grooves</a></li>
