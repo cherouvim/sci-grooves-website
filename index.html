@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sci-Grooves</title>
+    <meta name="description" content="Sci-Grooves - digital record label from Athens, Greece." />
+    <meta property="og:title" content="Sci-Grooves" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sci-grooves.com/" />
+    <meta property="og:site_name" content="Sci-Grooves" />
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <script>
+      if ((location.protocol === "http:" || location.protocol === "https:") && location.pathname.endsWith("index.html")) {
+        location.replace(location.origin + "/");
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #000;
+        --fg: #eaeaea;
+        --muted: #888;
+        --border: #111;
+        --link: #6aa9ff;
+        --maxw: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        word-break: break-all;
+      }
+
+      a:hover {
+        opacity: 0.7;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        border-bottom: 1px solid var(--border);
+        z-index: 1000;
+      }
+
+      nav {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      .logo {
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        font-size: 0.9rem;
+      }
+
+      section {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 100px 1rem 80px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      p {
+        color: var(--muted);
+        max-width: 700px;
+      }
+
+      .artist {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .artist picture {
+        display: flex;
+        justify-content: center;
+      }
+
+      .artist img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+      }
+
+      .artist h3 {
+        margin-top: 1rem;
+      }
+
+      .artist .socials {
+        margin-top: 0.5rem;
+      }
+
+      .releases-list {
+        display: grid;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .release {
+        border: 1px solid var(--border);
+        padding: 1rem;
+        background: #050505;
+      }
+
+      .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      @media (min-width: 700px) {
+        .artist {
+          grid-template-columns: 300px 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Sci-Grooves</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#roster">Roster</a></li>
+          <li><a href="#releases">Releases</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Sci-Grooves is a digital record label based in Athens, Greece. Focused on forward-thinking electronic and psychedelic music.</p>
+    </section>
+
+    <section id="roster">
+      <h2>Roster</h2>
+
+      <div id="artist-1" class="artist">
+        <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
+        <div>
+          <h3>Artist 1</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+          <div class="socials">
+            <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="artist-2" class="artist">
+        <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
+        <div>
+          <h3>Artist 2</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+          <div class="socials">
+            <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="artist-3" class="artist">
+        <picture><img src="https://placecats.com/350/500" width="350" height="500" /></picture>
+        <div>
+          <h3>Artist 3</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+
+      <div id="artist-4" class="artist">
+        <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
+        <div>
+          <h3>Artist 4</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+
+      <div id="artist-5" class="artist">
+        <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
+        <div>
+          <h3>Artist 5</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+
+      <div id="artist-6" class="artist">
+        <picture><img src="https://placecats.com/350/500" width="350" height="500" /></picture>
+        <div>
+          <h3>Artist 6</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+
+      <div id="artist-7" class="artist">
+        <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
+        <div>
+          <h3>Artist 7</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+
+      <div id="artist-8" class="artist">
+        <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
+        <div>
+          <h3>Artist 8</h3>
+          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="releases">
+      <h2>Releases</h2>
+      <div class="releases-list">
+        <div class="release">VA - Eternal dancefloor (Compilation) - SCG005 - 2025</div>
+        <div class="release">Meander - Cosmic Disco (Album) - SCG004 - 2025</div>
+        <div class="release">VA - The 10 Billion Year Collision (Compilation) - SCG003 - 2025</div>
+        <div class="release">Youtopia - Eclipsed Emotions (EP) - SCG002 - 2024</div>
+        <div class="release">VA - Galactic Freaks (Compilation) - SCG001 - 2024</div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <p>Announcements and latest activity.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <ul class="socials">
+        <li>Mail: <a href="mailto:scigrooves@gmail.com">scigrooves@gmail.com</a></li>
+        <li>Bandcamp: <a href="https://sci-grooves.bandcamp.com/" target="_blank" rel="noopener noreferrer">https://sci-grooves.bandcamp.com/</a></li>
+        <li>SoundCloud: <a href="https://soundcloud.com/sci-grooves" target="_blank" rel="noopener noreferrer">https://soundcloud.com/sci-grooves</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/scigrooves/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/scigrooves/</a></li>
+        <li>YouTube: <a href="https://www.youtube.com/@Sci-Grooves" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@Sci-Grooves</a></li>
+        <li>
+          Discogs:
+          <a href="https://www.discogs.com/label/4513938-Sci-Grooves" target="_blank" rel="noopener noreferrer"
+            >https://www.discogs.com/label/4513938-Sci-Grooves</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer>© 2026 Sci-Grooves - Athens, Greece</footer>
+  </body>
+</html>
