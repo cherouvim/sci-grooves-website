@@ -45,6 +45,7 @@
         color: var(--fg);
         line-height: 1.6;
       }
+
       a {
         color: var(--link);
         text-decoration: none;
@@ -131,17 +132,25 @@
         justify-content: center;
       }
 
-      .artist img {
+      #roster ul {
+        list-style-type: none;
+      }
+
+      #roster ul li {
+        padding-top: 2em;
+      }
+
+      #roster ul li img {
         max-width: 100%;
         height: auto;
         border: 1px solid var(--border);
       }
 
-      .artist h3 {
+      #roster ul li h3 {
         margin-top: 1rem;
       }
 
-      .artist .socials {
+      #roster ul li .socials {
         margin-top: 0.5rem;
       }
 
@@ -223,75 +232,49 @@
     <section id="roster">
       <h2>Roster</h2>
 
-      <div>
-        <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
-        <div>
+      <ul>
+        <li>
           <h3>Artist 1</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+          <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.</p>
+          <p>Nulla facilisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.</p>
           <div class="socials">
             <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <div>
-        <picture><img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" /></picture>
-        <div>
+        <li>
           <h3>Artist 2</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
+          <picture><img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" /></picture>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
+          <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue.</p>
+          <p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.</p>
           <div class="socials">
             <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <div>
-        <picture><img src="https://placecats.com/350/500" width="350" height="500" loading="lazy" /></picture>
-        <div>
+        <li>
           <h3>Artist 3</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
+          <picture><img src="https://placecats.com/350/500" width="350" height="500" loading="lazy" /></picture>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec ante. Sed lacinia, urna non tincidunt mattis.</p>
+          <p>Ut suscipit posuere justo at vulputate. Sed tristique magna sit amet purus gravida quis blandit turpis cursus.</p>
+          <div class="socials">
+            <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
+          </div>
+        </li>
 
-      <div>
-        <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
-        <div>
+        <li>
           <h3>Artist 4</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
-
-      <div>
-        <picture><img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" /></picture>
-        <div>
-          <h3>Artist 5</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
-
-      <div>
-        <picture><img src="https://placecats.com/350/500" width="350" height="500" loading="lazy" /></picture>
-        <div>
-          <h3>Artist 6</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
-
-      <div>
-        <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
-        <div>
-          <h3>Artist 7</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
-
-      <div>
-        <picture><img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" /></picture>
-        <div>
-          <h3>Artist 8</h3>
-          <p>Extended bio describing approach, sound design philosophy, releases, and direction.</p>
-        </div>
-      </div>
+          <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu.</p>
+          <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
+          <p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
+          <div class="socials">
+            <div>SoundCloud: <a href="https://example.com">https://example.com</a></div>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section id="releases">
