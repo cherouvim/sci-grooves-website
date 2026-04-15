@@ -20,8 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
 
     <style>
       :root {
@@ -69,7 +68,13 @@
         z-index: 1000;
       }
 
-      nav {
+      header .logo img {
+        height: 8em;
+        width: auto;
+        display: block;
+      }
+
+      header nav {
         max-width: var(--maxw);
         margin: 0 auto;
         display: flex;
@@ -77,24 +82,24 @@
         padding: 1rem;
       }
 
-      nav a.active {
+      header nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        font-size: 1.2rem;
+      }
+
+      header nav ul li a {
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      header nav ul li a.active {
         background: yellow;
         color: black;
         padding: 2px 6px;
         border-bottom: none;
-      }
-
-      .logo img {
-        height: 8em;
-        width: auto;
-        display: block;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-        font-size: 0.9rem;
       }
 
       section {
@@ -109,7 +114,13 @@
         padding-top: calc(10em + 2rem);
       }
 
-      h2 {
+      h2, h3 {
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      section h2 {
         margin-bottom: 1rem;
         font-weight: 600;
       }
