@@ -45,15 +45,18 @@
         color: var(--fg);
         line-height: 1.6;
       }
-
       a {
         color: var(--link);
-        text-decoration: underline;
-        word-break: break-all;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition:
+          border-color 0.15s ease,
+          opacity 0.15s ease;
       }
 
       a:hover {
         opacity: 0.7;
+        border-bottom: 1px solid var(--link);
       }
 
       header {
@@ -77,6 +80,7 @@
         background: yellow;
         color: black;
         padding: 2px 6px;
+        border-bottom: none;
       }
 
       .logo {
@@ -193,7 +197,7 @@
     <section id="roster">
       <h2>Roster</h2>
 
-      <div id="artist-1" class="artist">
+      <div>
         <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
         <div>
           <h3>Artist 1</h3>
@@ -204,7 +208,7 @@
         </div>
       </div>
 
-      <div id="artist-2" class="artist">
+      <div>
         <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
         <div>
           <h3>Artist 2</h3>
@@ -215,7 +219,7 @@
         </div>
       </div>
 
-      <div id="artist-3" class="artist">
+      <div>
         <picture><img src="https://placecats.com/350/500" width="350" height="500" /></picture>
         <div>
           <h3>Artist 3</h3>
@@ -223,7 +227,7 @@
         </div>
       </div>
 
-      <div id="artist-4" class="artist">
+      <div>
         <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
         <div>
           <h3>Artist 4</h3>
@@ -231,7 +235,7 @@
         </div>
       </div>
 
-      <div id="artist-5" class="artist">
+      <div>
         <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
         <div>
           <h3>Artist 5</h3>
@@ -239,7 +243,7 @@
         </div>
       </div>
 
-      <div id="artist-6" class="artist">
+      <div>
         <picture><img src="https://placecats.com/350/500" width="350" height="500" /></picture>
         <div>
           <h3>Artist 6</h3>
@@ -247,7 +251,7 @@
         </div>
       </div>
 
-      <div id="artist-7" class="artist">
+      <div>
         <picture><img src="https://placecats.com/400/600" width="400" height="600" /></picture>
         <div>
           <h3>Artist 7</h3>
@@ -255,7 +259,7 @@
         </div>
       </div>
 
-      <div id="artist-8" class="artist">
+      <div>
         <picture><img src="https://placecats.com/650/400" width="650" height="400" /></picture>
         <div>
           <h3>Artist 8</h3>
@@ -318,7 +322,7 @@
       </ul>
     </section>
 
-    <footer>© 2026 Sci-Grooves - Athens, Greece</footer>
+    <footer>© 2024 - 2026 Sci-Grooves &middot; Athens, Greece</footer>
 
     <script>
       const navLinks = document.querySelectorAll("nav a");
