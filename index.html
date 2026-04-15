@@ -85,7 +85,7 @@
       }
 
       .logo img {
-        height: 6em;
+        height: 8em;
         width: auto;
         display: block;
       }
@@ -119,24 +119,14 @@
         max-width: 700px;
       }
 
-      .artist {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 2rem 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .artist picture {
-        display: flex;
-        justify-content: center;
+      #about p {
       }
 
       #roster ul {
         list-style-type: none;
       }
 
-      #roster ul li {
+      #roster ul li:not(:first-child) {
         padding-top: 2em;
       }
 
@@ -185,13 +175,6 @@
         color: var(--muted);
         font-size: 0.8rem;
       }
-
-      @media (min-width: 700px) {
-        .artist {
-          grid-template-columns: 300px 1fr;
-          align-items: start;
-        }
-      }
     </style>
   </head>
 
@@ -235,7 +218,7 @@
       <ul>
         <li>
           <h3>Artist 1</h3>
-          <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
+          <img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.</p>
           <p>Nulla facilisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.</p>
           <div class="socials">
@@ -245,7 +228,7 @@
 
         <li>
           <h3>Artist 2</h3>
-          <picture><img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" /></picture>
+          <img src="https://placecats.com/650/400" width="650" height="400" loading="lazy" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
           <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue.</p>
           <p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.</p>
@@ -256,7 +239,7 @@
 
         <li>
           <h3>Artist 3</h3>
-          <picture><img src="https://placecats.com/350/500" width="350" height="500" loading="lazy" /></picture>
+          <img src="https://placecats.com/350/500" width="350" height="500" loading="lazy" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec ante. Sed lacinia, urna non tincidunt mattis.</p>
           <p>Ut suscipit posuere justo at vulputate. Sed tristique magna sit amet purus gravida quis blandit turpis cursus.</p>
           <div class="socials">
@@ -266,7 +249,7 @@
 
         <li>
           <h3>Artist 4</h3>
-          <picture><img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" /></picture>
+          <img src="https://placecats.com/400/600" width="400" height="600" loading="lazy" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu.</p>
           <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
           <p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
