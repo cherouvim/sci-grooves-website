@@ -191,11 +191,41 @@
         font-size: 0.9rem;
       }
 
-      footer img {
+      footer .glare {
         margin: 1em auto;
         width: 12em;
         height: auto;
         display: block;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer .glare img {
+        display: block;
+        width: 12em;
+        height: auto;
+      }
+
+      footer .glare::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
+        transform: translateX(-150%);
+        animation: glare-shine 3s infinite;
+      }
+
+      @keyframes glare-shine {
+        0% {
+          transform: translateX(-150%);
+        }
+        50% {
+          transform: translateX(150%);
+        }
+        100% {
+          transform: translateX(150%);
+        }
       }
 
       @media (max-width: 520px) {
@@ -357,7 +387,9 @@
 
     <footer>
       <p>© 2024 - 2026 Sci-Grooves &middot; Athens, Greece</p>
-      <img src="/logo-2.png" alt="Sci-Grooves" width="420" height="80" />
+      <div class="glare">
+        <img src="/logo-2.png" alt="Sci-Grooves" width="420" height="80" />
+      </div>
     </footer>
 
     <script>
