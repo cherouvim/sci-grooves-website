@@ -183,11 +183,18 @@
         content: "→ ";
       }
 
-      footer {
+      footer p {
+        margin: 1em auto;
         text-align: center;
-        padding: 2rem 1rem;
         color: var(--muted);
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      footer img {
+        margin: 1em auto;
+        width: 12em;
+        height: auto;
+        display: block;
       }
 
       @media (max-width: 520px) {
@@ -366,7 +373,10 @@
       </ul>
     </section>
 
-    <footer>© 2024 - 2026 Sci-Grooves &middot; Athens, Greece</footer>
+    <footer>
+      <p>© 2024 - 2026 Sci-Grooves &middot; Athens, Greece</p>
+      <img src="/logo-2.png" alt="Sci-Grooves" width="420" height="80" />
+    </footer>
 
     <script>
       const navLinks = document.querySelectorAll("nav a");
