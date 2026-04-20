@@ -130,6 +130,29 @@
 
       section h2 {
         margin-bottom: 1rem;
+        position: relative;
+        padding: 0.4em 0.8em;
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, 1);
+      }
+
+      section h2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, #ffea00, #ff00ff, #ae00ff, #5f00ff, #050284, #00cfff, #00ffcc, #39ff14, #ff5e00, #ff00ff, #ffea00);
+        background-size: 200% 100%;
+        opacity: 0.25;
+        animation: h2-gradient-move 6s linear infinite;
+      }
+
+      @keyframes h2-gradient-move {
+        from {
+          background-position: 0% 0;
+        }
+        to {
+          background-position: 200% 0;
+        }
       }
 
       p {
