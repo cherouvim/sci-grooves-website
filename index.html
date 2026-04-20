@@ -121,7 +121,8 @@
       }
 
       h2,
-      h3 {
+      h3,
+      h4 {
         font-family: "Audiowide", sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -139,6 +140,7 @@
       #roster ul {
         list-style-type: none;
         padding-bottom: 2em;
+        margin-left: 1em;
       }
 
       #roster ul li:not(:first-child) {
@@ -166,6 +168,29 @@
 
       #roster ul li ul.socials li::before {
         content: "→ ";
+      }
+
+      #roster h3 {
+        position: relative;
+        display: inline-block;
+        opacity: 0.8;
+        font-size: 1.8em;
+      }
+
+      #roster h3::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        width: 5em;
+        height: 1px;
+        background: currentColor;
+        margin-left: 0.5em;
+        transform: translateY(-50%);
+      }
+
+      #roster h4 {
+        font-size: 2em;
       }
 
       #releases ol {
@@ -329,7 +354,7 @@
       <h3>Label Artists</h3>
       <ul>
         <li>
-          <h3>Meander</h3>
+          <h4>Meander</h4>
           <img src="/roster/meander.jpg" width="420" height="420" loading="lazy" alt="Meander - Artist - Sci-Grooves" />
           <p>
             Behind the production of Meander from Athens (Gr), is Michael Fourlas. He discovered the temple of electronic music at the middle of 90’s and he
@@ -358,7 +383,7 @@
         </li>
 
         <li>
-          <h3>Taz</h3>
+          <h4>Taz</h4>
           <img src="/roster/taz.jpg" width="420" height="420" loading="lazy" alt="Taz - Artist - Sci-Grooves" />
           <p>
             T.A.Z. – Temporary Autonom Zone Ben Melech, born under the October sky of 1985, found his calling early — drawn by the hypnotic pulse of psychedelic
@@ -386,7 +411,7 @@
         </li>
 
         <li>
-          <h3>Večna Uçurum</h3>
+          <h4>Večna Uçurum</h4>
           <img src="/roster/vecna-ucurum.jpg" width="420" height="420" loading="lazy" alt="Večna Uçurum - Artist - Sci-Grooves" />
           <p>
             Večna Uçurum is a sonic pact forged between Kuiper and Fear Disorder a synapsis dedicated to exploring the depths of psychedelic soundscapes.
@@ -409,7 +434,7 @@
         </li>
 
         <li>
-          <h3>Witchcraft</h3>
+          <h4>Witchcraft</h4>
           <img src="/roster/witchcraft.jpg" width="420" height="420" loading="lazy" alt="Witchcraft - Artist - Sci-Grooves" />
           <p>
             Witchcraft is the psychedelic project by Michael Chavales (Drip Drop/RiDDeN ) and Michael Fourlas (Biohacker/Meander/3,14). The two artists crossed
@@ -428,7 +453,7 @@
         </li>
 
         <li>
-          <h3>Youtopia</h3>
+          <h4>Youtopia</h4>
           <img src="/roster/youtopia.jpg" width="420" height="420" loading="lazy" alt="Youtopia - Artist - Sci-Grooves" />
           <p>
             Behind the project Youtopia, is Chrisa Efstathiou from Athens (Greece). Her love and her passion for electronic music began in her school years,
@@ -458,7 +483,7 @@
       <h3>Label DJs</h3>
       <ul>
         <li>
-          <h3>Prizon</h3>
+          <h4>Prizon</h4>
           <img src="/roster/prizon.jpg" width="420" height="420" loading="lazy" alt="Prizon - DJ - Sci-Grooves" />
           <p>
             We proudly present our label DJ, DJ Prizon! 🚀🎵 Get ready for crazy DJ sets, where electronic sounds meet the science of rhythm! DJ Prizon delivers
@@ -482,7 +507,7 @@
           </ul>
         </li>
         <li>
-          <h3>Uma Alma</h3>
+          <h4>Uma Alma</h4>
           <img src="/roster/uma-alma.jpg" width="420" height="420" loading="lazy" alt="Uma Alma - Artist - Sci-Grooves" />
           <p>
             Uma Alma is a Music Producer, DJ & Sound Designer. She studied Music Technology and Acoustics Engineering, Music Therapy, and Digital Arts. She was
