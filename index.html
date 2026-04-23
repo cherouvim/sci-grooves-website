@@ -160,9 +160,32 @@
         }
       }
 
+      h3 {
+        position: relative;
+        display: inline-block;
+        opacity: 0.8;
+        font-size: 1.8em;
+      }
+
+      h3::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        width: 5em;
+        height: 1px;
+        background: currentColor;
+        margin-left: 0.5em;
+        transform: translateY(-50%);
+      }
+
       p {
         color: var(--muted);
         max-width: 700px;
+      }
+
+      #roster h4 {
+        font-size: 2em;
       }
 
       #roster ul {
@@ -198,29 +221,6 @@
         content: "→ ";
       }
 
-      #roster h3 {
-        position: relative;
-        display: inline-block;
-        opacity: 0.8;
-        font-size: 1.8em;
-      }
-
-      #roster h3::after {
-        content: "";
-        position: absolute;
-        left: 100%;
-        top: 50%;
-        width: 5em;
-        height: 1px;
-        background: currentColor;
-        margin-left: 0.5em;
-        transform: translateY(-50%);
-      }
-
-      #roster h4 {
-        font-size: 2em;
-      }
-
       #releases ol {
         display: grid;
         gap: 1rem;
@@ -244,6 +244,62 @@
         width: 6em;
         height: 6em;
         flex-shrink: 0;
+      }
+
+      #events h2 + h3 ~ h3 {
+        margin-top: 1em;
+      }
+
+      #events h4 {
+        font-size: 1.4em;
+      }
+
+      #events div ~ div {
+        margin-top: 1em;
+      }
+
+      #events .video {
+        position: relative;
+        display: inline-block;
+      }
+
+      #events .video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      #events .video::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 48px;
+        height: 48px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      #events .video::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+        border-style: solid;
+        border-width: 12px 0 12px 18px;
+        border-color: transparent transparent transparent white;
+      }
+
+      #events a img {
+        border: 2px solid #111;
+      }
+
+      #events a:hover img {
+        border: 2px solid yellow;
       }
 
       #contact ul {
@@ -354,7 +410,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#roster">Roster</a></li>
           <li><a href="#releases">Releases</a></li>
-          <li><a href="#news">News</a></li>
+          <li><a href="#events">Events</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -608,13 +664,68 @@
         </ol>
       </section>
 
-      <section id="news">
-        <h2>News</h2>
-        <p>Announcements and latest activity.</p>
-        <p>TODO:</p>
-        <a href="/roster/vecna-ucurum.jpg" class="glightbox">
-          <img src="/releases/SCG005.jpg" alt="cat" style="width: 80px; height: 80px" />
-        </a>
+      <section id="events">
+        <h2>Events</h2>
+        <h3>Upcoming</h3>
+        <p>To be announced. Stay tuned!</p>
+        <h3>Past</h3>
+        <div>
+          <h4>04 Oct 2025 • Sci-Grooves Event 03</h4>
+          <a href="https://www.youtube.com/watch?v=A7aTL_6kncA" class="glightbox video" data-gallery="event-03">
+            <img src="https://img.youtube.com/vi/A7aTL_6kncA/hqdefault.jpg" style="width: 120px; height: 200px; object-fit: cover; object-position: center" />
+          </a>
+          <a href="/events/sci-grooves-event-03-flyer.jpg" class="glightbox" data-gallery="event-03">
+            <img src="/events/sci-grooves-event-03-flyer.thumb.jpg" height="200" />
+          </a>
+          <br />
+          <a href="/events/sci-grooves-event-03-1.jpg" class="glightbox" data-gallery="event-03">
+            <img src="/events/sci-grooves-event-03-1.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-03-2.jpg" class="glightbox" data-gallery="event-03">
+            <img src="/events/sci-grooves-event-03-2.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-03-3.jpg" class="glightbox" data-gallery="event-03">
+            <img src="/events/sci-grooves-event-03-3.thumb.jpg" height="200" />
+          </a>
+        </div>
+        <div>
+          <h4>03 May 2025 • Sci-Grooves Event 02</h4>
+          <a href="https://www.youtube.com/watch?v=t0azO1F7KZg" class="glightbox video" data-gallery="event-02">
+            <img src="https://img.youtube.com/vi/t0azO1F7KZg/hqdefault.jpg" style="width: 120px; height: 200px; object-fit: cover; object-position: center" />
+          </a>
+          <a href="/events/sci-grooves-event-02-flyer.jpg" class="glightbox" data-gallery="event-02">
+            <img src="/events/sci-grooves-event-02-flyer.thumb.jpg" height="200" />
+          </a>
+          <br />
+          <a href="/events/sci-grooves-event-02-1.jpg" class="glightbox" data-gallery="event-02">
+            <img src="/events/sci-grooves-event-02-1.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-02-2.jpg" class="glightbox" data-gallery="event-02">
+            <img src="/events/sci-grooves-event-02-2.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-02-3.jpg" class="glightbox" data-gallery="event-02">
+            <img src="/events/sci-grooves-event-02-3.thumb.jpg" height="200" />
+          </a>
+        </div>
+        <div>
+          <h4>18 Jan 2025 • Sci-Grooves Event 01</h4>
+          <a href="https://www.youtube.com/watch?v=p_94UfktRlg" class="glightbox video" data-gallery="event-01">
+            <img src="https://img.youtube.com/vi/p_94UfktRlg/hqdefault.jpg" style="width: 120px; height: 200px; object-fit: cover; object-position: center" />
+          </a>
+          <a href="/events/sci-grooves-event-01-flyer.jpg" class="glightbox" data-gallery="event-01">
+            <img src="/events/sci-grooves-event-01-flyer.thumb.jpg" height="200" />
+          </a>
+          <br />
+          <a href="/events/sci-grooves-event-01-1.jpg" class="glightbox" data-gallery="event-01">
+            <img src="/events/sci-grooves-event-01-1.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-01-2.jpg" class="glightbox" data-gallery="event-01">
+            <img src="/events/sci-grooves-event-01-2.thumb.jpg" height="200" />
+          </a>
+          <a href="/events/sci-grooves-event-01-3.jpg" class="glightbox" data-gallery="event-01">
+            <img src="/events/sci-grooves-event-01-3.thumb.jpg" height="200" />
+          </a>
+        </div>
       </section>
 
       <section id="contact">
