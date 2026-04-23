@@ -21,7 +21,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css"
+      integrity="sha384-GPAzSuZc0kFvdIev6wm9zg8gnafE8tLso7rsAYQfc9hAdWCpOcpcNI5W9lWkYcsd"
+      crossorigin="anonymous"
+    />
     <style>
       :root {
         --bg: #000;
@@ -595,6 +600,10 @@
     <section id="news">
       <h2>News</h2>
       <p>Announcements and latest activity.</p>
+      <p>TODO:</p>
+      <a href="/roster/vecna-ucurum.jpg" class="glightbox">
+        <img src="/releases/SCG005.jpg" alt="cat" style="width: 80px; height: 80px" />
+      </a>
     </section>
 
     <section id="contact">
@@ -622,6 +631,14 @@
       </div>
     </footer>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"
+      integrity="sha384-MZZbZ6RXJudK43v1qY1zOWKOU2yfeBPatuFoKyHAaAgHTUZhwblRTc9CphTt4IGQ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const lightbox = GLightbox();
+    </script>
     <script>
       const navLinks = document.querySelectorAll("nav a");
 
