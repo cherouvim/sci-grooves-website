@@ -73,7 +73,7 @@
       }
 
       a:hover img {
-        border: 2px solid yellow !important;
+        border: 2px solid yellow;
       }
 
       header {
@@ -88,14 +88,16 @@
       }
 
       header .logo {
+        width: 100%;
+        overflow: hidden;
         display: flex;
         justify-content: center;
       }
 
       header .logo img {
-        height: 10em;
+        height: 14em;
         width: auto;
-        display: block;
+        flex-shrink: 0;
       }
 
       header nav {
@@ -129,12 +131,12 @@
         max-width: var(--maxw);
         margin: 0 auto;
         border-bottom: 1px solid var(--border);
-        scroll-margin-top: 10em;
+        scroll-margin-top: 12em;
         padding: 100px 1rem 7em;
       }
 
       section:first-of-type {
-        padding-top: calc(10em + 6.3rem);
+        padding-top: calc(12em + 6.3rem);
       }
 
       h2,
@@ -364,16 +366,8 @@
       }
 
       @media (max-width: 630px) {
-        header .logo {
-          width: 100%;
-          height: 4em;
-        }
-
         header .logo img {
-          width: 100%;
-          height: auto;
-          max-width: none;
-          object-fit: contain;
+          height: 7em;
         }
 
         header nav ul {
@@ -395,11 +389,11 @@
         }
 
         section {
-          scroll-margin-top: 13.5em;
+          scroll-margin-top: 16.5em;
         }
 
         section:first-of-type {
-          padding-top: calc(20em);
+          padding-top: calc(23em);
         }
 
         #roster ul {
@@ -422,7 +416,7 @@
       <nav>
         <div class="logo">
           <h1 style="position: absolute; left: -9999px">Sci-Grooves</h1>
-          <img src="/logo.png" alt="Sci-Grooves" width="663" height="290" />
+          <img src="/logo.jpg" alt="Sci-Grooves" width="1254" height="270" />
         </div>
         <ul>
           <li><a href="#about">About</a></li>
