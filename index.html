@@ -60,8 +60,20 @@
       }
 
       a:hover {
-        opacity: 0.7;
+        opacity: 0.8;
         border-bottom: 1px solid var(--link);
+      }
+
+      a:has(img):hover {
+        border-bottom: 0px solid transparent;
+      }
+
+      a img {
+        border: 2px solid #111;
+      }
+
+      a:hover img {
+        border: 2px solid yellow !important;
       }
 
       header {
@@ -238,6 +250,7 @@
         display: flex;
         align-items: center;
         gap: 1em; /* replaces padding-left */
+        border: 0;
       }
 
       #releases ol li a img {
@@ -292,14 +305,6 @@
         border-style: solid;
         border-width: 12px 0 12px 18px;
         border-color: transparent transparent transparent white;
-      }
-
-      #events a img {
-        border: 2px solid #111;
-      }
-
-      #events a:hover img {
-        border: 2px solid yellow;
       }
 
       #contact ul {
