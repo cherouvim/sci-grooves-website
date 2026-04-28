@@ -116,6 +116,23 @@
         gap: 1.2rem;
       }
 
+      header nav .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      header nav .burger span {
+        width: 25px;
+        height: 2px;
+        background: var(--fg);
+        display: block;
+      }
+
       header nav ul {
         display: flex;
         gap: 1rem;
@@ -384,12 +401,38 @@
           height: 5em;
         }
 
+        header nav {
+          align-items: stretch;
+        }
+
+        header nav .burger {
+          display: flex;
+          position: absolute;
+          right: 1rem;
+          top: 1.8rem;
+        }
+
+        header nav .burger:hover span {
+          background: yellow;
+        }
+
+        header nav .burger[aria-expanded="true"] {
+          opacity: 0.8;
+        }
+
         header nav ul {
           flex-direction: column;
           align-items: center;
           gap: 0.5rem;
           font-size: 1rem;
           width: 100%;
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        header nav ul.open {
+          display: flex;
         }
 
         header nav ul li {
@@ -403,11 +446,11 @@
         }
 
         section {
-          scroll-margin-top: 14.5em;
+          scroll-margin-top: 2.5em;
         }
 
         section:first-of-type {
-          padding-top: calc(21em);
+          padding-top: calc(9em);
         }
 
         #roster ul {
@@ -432,6 +475,11 @@
           <h1 style="position: absolute; left: -9999px">Sci-Grooves</h1>
           <img src="/logo.jpg" alt="Sci-Grooves" width="1254" height="270" />
         </div>
+        <button class="burger" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#roster">Roster</a></li>
@@ -814,6 +862,31 @@
     ></script>
     <script>
       const lightbox = GLightbox();
+    </script>
+    <script>
+      const burger = document.querySelector("header nav .burger");
+      const menu = document.querySelector("header nav ul");
+
+      function closeMenu() {
+        menu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      }
+
+      burger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const open = menu.classList.toggle("open");
+        burger.setAttribute("aria-expanded", open);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header nav")) {
+          closeMenu();
+        }
+      });
     </script>
     <script>
       const navLinks = document.querySelectorAll("nav a");
